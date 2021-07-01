@@ -30,7 +30,7 @@ public class SampleSeleniumTest {
 		System.out.println("Clicking Sign-in");
 		driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[4]/ul[1]/li[2]/a")).click();
 		System.out.println("Entering username");
-		driver.findElement(By.xpath("//*[@id=\"identifierId\"]")).sendKeys("renju.jenkins.training");
+		driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div[1]/div/div[1]/div/div[1]/input")).sendKeys("renju.jenkins.training");
 		System.out.println("Clicking Next button");
 		driver.findElement(By.xpath("//*[@id=\"identifierNext\"]/div/button/span")).click();
 		Thread.sleep(5000);
