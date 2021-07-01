@@ -27,8 +27,8 @@ public class SampleSeleniumTest {
 		driver.get("http://www.google.com");
 		System.out.println("Clicking Gmail Link");
 		driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div/div/div[1]/div/div[1]/a")).click();
-		System.out.println("Clicking Sign In link");
-		driver.findElement(By.xpath("//*[@id="identifierId"]")).click();
+		System.out.println("Clicking username field");
+		driver.findElement(By.xpath("//*[@id=\"identifierId\"]")).click();
 		System.out.println("Entering username");
 		driver.findElement(By.xpath("//*[@id=\"identifierId\"]")).sendKeys("renju.jenkins.training");
 		System.out.println("Clicking Next button");
