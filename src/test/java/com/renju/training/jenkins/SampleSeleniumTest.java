@@ -29,6 +29,12 @@ public class SampleSeleniumTest {
 		driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div/div/div[1]/div/div[1]/a")).click();
 		System.out.println("Clicking Sign-in");
 		driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[4]/ul[1]/li[2]/a")).click();
+		String currentTab = driver.getWindowHandle();
+		for (String tab : driver.getWindowHandles()) {
+		    if (!tab.equals(currentTab)) {
+			driver.switchTo().window(tab); 
+		    }       
+		}
 		System.out.println("Entering username");
 		driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div[1]/div/div[1]/div/div[1]/input")).sendKeys("renju.jenkins.training");
 		System.out.println("Clicking Next button");
