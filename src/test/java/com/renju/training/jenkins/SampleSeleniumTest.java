@@ -27,12 +27,10 @@ public class SampleSeleniumTest {
 		driver.get("http://www.google.com");
 		System.out.println("Clicking Gmail Link");
 		driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/div/div/div[1]/div/div[1]/a")).click();
-		System.out.println("Clicking username field");
-		driver.findElement(By.xpath("//*[@id=\"view_container\"]/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div[1]/div")).click();
 		System.out.println("Entering username");
 		driver.findElement(By.xpath("//*[@id=\"identifierId\"]")).sendKeys("renju.jenkins.training");
 		System.out.println("Clicking Next button");
-		driver.findElement(By.xpath("//*[@id=\"identifierNext\"]/content/span")).click();
+		driver.findElement(By.xpath("//*[@id=\"identifierNext\"]/div/button/span")).click();
 		Thread.sleep(5000);
 		boolean textFound = driver.getPageSource().contains("Forgot password");
 		AssertJUnit.assertTrue(textFound);
